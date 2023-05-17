@@ -1,37 +1,50 @@
 <div class="wrapper">
+
   <div class="header">
     <div class="in-header">
       <div>
         <i class="uil uil-video"></i>
       </div>
+
       <div class="title">
-        App Reconocimiento Facial
+        Reconocimiento de gestos
       </div>
     </div>
   </div>
+
   <div class="block-main">
     <div class="cam">
-      <app-video-player 
-      [width]="dimensionVideo.width"
-      [height]="dimensionVideo.height"
-      [stream]="currentStream">></app-video-player>
+      <app-video-player
+        [width]="dimensionVideo.width"
+        [height]="dimensionVideo.height"
+        [stream]="currentStream">
+      </app-video-player>
     </div>
+
     <div class="sidebar">
-      <div class="zona-body">
+      <div class="zone-body">
         <div class="block">
-          brock 1
+          <div><b>Estado de ánimo</b></div>
+          <div class="block-expression">
+            <div *ngFor="let exp of listExpressions">
+              <span>{{exp.name}}: </span><span class="value-number">{{exp.value | number}}</span>
+            </div>
+          </div>
         </div>
         <div class="block">
-          brock 2
+          <div><b>Puntos de referencia</b></div>
+          <div class="canvas-preview"></div>
         </div>
       </div>
-      <div class="zona-btn">
+      <div class="zone-btn">
         <ul class="list-btn">
           <li *ngFor="let btn of [1,1,1]">
-            Icon
+            <i class="uil uil-emoji"></i>
           </li>
         </ul>
       </div>
     </div>
+
   </div>
+
 </div>

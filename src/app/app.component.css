@@ -9,6 +9,7 @@
 }
 ::ng-deep .canvas-preview {
     position: relative;
+    top: -100px;
 }
 ::ng-deep .canvas-preview canvas {
     width: 100%;

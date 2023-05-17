@@ -11,7 +11,9 @@ describe('VideoPlayerComponent', () => {
       declarations: [ VideoPlayerComponent ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(VideoPlayerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
